@@ -30,6 +30,7 @@ pip install pre-commit
 
 Adjust the `.pre-commit-config.yaml` file.
 If you want to use pylint and/or black, install them with
+
 ```
 pip install pylint
 ```
@@ -39,6 +40,8 @@ and
 ```
 pip install black
 ```
+
+Adjust the `.pylintrc` file with rules that you want to exclude.
 
 Now install the git hooks with
 
@@ -50,4 +53,29 @@ Try running pre-commit against all files
 
 ```
 pre-commit run --all-files
+```
+
+## Documentation with Sphinx
+
+Install spinx
+```
+pip install sphinx
+```
+
+Install readthedocs theme
+```
+pip install sphinx-rtd-theme
+```
+
+### Update default files
+
+Navigate to `docs` and run
+```
+sphinx-quickstart
+```
+
+## Build docs
+
+```
+sphinx-build -b html docs/source docs/build
 ```
